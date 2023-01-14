@@ -1,5 +1,7 @@
 import Profile from './Profile/Profile';
 import user from '../data/task1/user.json';
+import data from '../data/task2/data.json';
+import Statistics from './Statistics/Statistics';
 
 export const App = () => {
   return (
@@ -9,30 +11,11 @@ export const App = () => {
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
-        // stats=""
         followers={user.stats.followers}
         views={user.stats.views}
         likes={user.stats.likes}
       ></Profile>
+      <Statistics title="UPLOAD STATS" stats={data}></Statistics>
     </>
-
-    // username — имя пользователя
-    // tag — тег в социальной сети без @
-    // location — город и страна
-    // avatar — ссылка на изображение
-    // stats — объект с информацией об активности
-
-    // <div
-    //   style={{
-    //     height: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     fontSize: 40,
-    //     color: '#010101',
-    //   }}
-    // >
-    //   React homework template
-    // </div>
   );
 };
