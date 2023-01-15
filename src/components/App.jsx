@@ -2,6 +2,8 @@ import Profile from './Profile/Profile';
 import user from '../data/task1/user.json';
 import data from '../data/task2/data.json';
 import Statistics from './Statistics/Statistics';
+import FriendList from './FriendList/FriendList';
+import list from '../data/task3/friends.json';
 
 export const App = () => {
   return (
@@ -16,6 +18,8 @@ export const App = () => {
         likes={user.stats.likes}
       ></Profile>
       <Statistics title="UPLOAD STATS" stats={data}></Statistics>
+      <Statistics stats={data} />
+      <FriendList friends={list}></FriendList>
     </>
   );
 };
